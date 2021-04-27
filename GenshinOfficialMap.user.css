@@ -1,0 +1,57 @@
+/* ==UserStyle==
+@name			Genshin Impact Hoyolab Official Interactive Map [Leaflet]
+@namespace		mchubby
+@version		1.0.0
+@description	Style tweaks for the Genshin Impact Official Map
+@author			mchubby
+@license		CC-BY-SA-4.0
+@homepageURL	https://github.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/
+@updateURL		https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/master/GenshinOfficialMap.user.css
+@preprocessor	stylus
+@var checkbox hide_pin_frame "Hide Pin Circular Frame" 1
+@var checkbox add_pin_glow "Add Pin Glow" 1
+@var checkbox prettier_region_labels "Prettier Region Labels" 1
+@var checkbox color_inversion "Invert map colors" 0
+==/UserStyle== */
+@-moz-document url-prefix("https://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html") {
+
+	if hide_pin_frame {
+		.mhy-game-gis-icon {
+			background-image: none !important;
+		}
+	}
+
+	if add_pin_glow {
+		@keyframes pulse {
+			100% {
+				box-shadow: 0 1px 2px 0 rgba(255, 192, 48, 0.7);
+			}
+			50% {
+				box-shadow: 0 0 0 3px rgba(255, 192, 48, 0);
+			}
+			0% {
+				box-shadow: 0 1px 3px 1px rgba(255, 192, 48, 1);
+			}
+		}
+		/* Exclude Statues of 7 and teleporters */
+		.mhy-game-gis-icon__img:not([style*="357413506633071859.png"]):not([style*="8799482478853097434.png"]) {
+			animation: pulse 2s infinite;
+			border: 1px solid #fc3;
+		}
+	}
+
+	if prettier_region_labels {
+		.location-name {
+			-webkit-text-stroke-width: 3px;
+			opacity: 1;
+			paint-order: stroke;
+		}
+	}
+
+	/* Invert map tiles colors, excluding pins ******************************************************/
+	if color_inversion {
+		.leaflet-tile-container img {
+			filter: invert(100%) hue-rotate(180deg) brightness(50%) !important;
+		}
+	}
+}
