@@ -14,10 +14,14 @@ For use with the official interactive map (https://webstatic-sea.mihoyo.com/app/
 
 > ![Settings pane](https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/main/images/config1.png)
 
+#### Hide Pin Circular Frame
 > ![Setting: "Hide Pin Circular Frame"](https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/main/images/setting1.png)
 
+#### Add Pin Glow
 > ![Setting: "Add Pin Glow"](https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/main/images/setting2.png)
 
+#### Prettier Region Labels
 > ![Setting: "Prettier Region Labels"](https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/main/images/setting3.png)
 
+#### Invert map colors
 > ![Setting: "Invert map colors"](https://raw.githubusercontent.com/mchubby/Genshin-Impact-Official-Interactive-Map-UserStyle/main/images/setting4.png)

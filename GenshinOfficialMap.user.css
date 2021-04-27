@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name			Genshin Impact Hoyolab Official Interactive Map [Leaflet]
 @namespace		mchubby
-@version		1.0.0
+@version		1.0.1
 @description	Style tweaks for the Genshin Impact Official Map
 @author			mchubby
 @license		CC-BY-SA-4.0
@@ -42,7 +42,7 @@
 
 	if prettier_region_labels {
 		.location-name {
-			-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke: unset;
 			opacity: 1;
 			paint-order: stroke;
 		}
